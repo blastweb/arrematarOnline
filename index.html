@@ -12,16 +12,37 @@
 
 </head>
 <body>
+    <!--MODAL-->
+    <div id="fadeMenu" class="hide">
+        <div id="modalMenu" class="hide rounded-0" >
+            <div class="modalMenu-header">
+                <a href="#"><img class="w-50" src="images/logo.png" alt="Logo da Empresa"></a>
+                <a id="closeMenu" class="px-3 py-2 bg-danger text-dark"><span><i class="fa-solid fa-x"></i></span></a>
+            </div>
+            <div class="modalMenu-body">
+                <a href="/" class="btn-block btn-light text-decoration-none m-0">Home</a>
+                <a href="#" class="btn-block btn-light text-decoration-none m-0">Leilões</a>
+                <a href="#" class="btn-block btn-light text-decoration-none m-0">Mais</a>
+                <a href="../area/fale-conosco#conteudo-site" class="btn-block btn-light text-decoration-none m-0">Fale Conosco</a>
+                <hr>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-person-circle p-2" style="font-size: 1.5rem;"></i>
+                    <p class="m-0" style="font-size: .8rem;">Realize <b><a class="text-dark" href="../externo/login#conteudo-site">Login</a></b> ou<b class="text-nowrap"> <a class="text-dark" href="../externo/cadastrar#conteudo-site">Cadastre-se</a></b></p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
     <!-------------------------------------------------------------------------------->
     <header>
         <!--Barra topo branca-->
         <section class="bg-white">
-            <div class="container d-flex align-items-center justify-content-between py-2">
+            <div class="container d-flex align-items-center justify-content-center justify-content-lg-between py-2">
                 <div class="d-flex align-items-center gap-5">
                     <div><i class="fa-solid fa-phone"></i> Telefone</div>
                     <div><i class="fa-solid fa-envelope"></i> Email</div>
                 </div>
-                <nav class="d-flex align-items-center gap-5">
+                <nav class="d-none d-lg-flex align-items-center gap-5">
                     <a href="" class="text-decoration-none cor-paleta-1">Home</a>
                     <a href="" class="text-decoration-none cor-paleta-1">Quem Somos</a>
                     <a href="" class="text-decoration-none cor-paleta-1">Fale Conosco</a>
@@ -32,15 +53,15 @@
 
         <!--Barra Pesquisar-->
         <section class="bg-light border-top border-bottom">
-            <div class="container d-flex align-items-center justify-content-between">
-                <div class="col-4 d-flex align-items-center justify-content-start py-3">
-                    <img src="images/logo.png" alt="" style="filter: brightness(100);">
+            <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
+                <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center py-3">
+                    <img src="images/logo.png" alt="">
                 </div>
-                <div class="col-4 d-flex align-items-center justify-content-center">
+                <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center py-3">
                     <input type="text" class="form-control rounded-0 borda-paleta-1" id="pesquisaSite" placeholder="O que você está procurando?" aria-label="Recipient's username" aria-describedby="button-addon">
                     <button class="btn borda-paleta-1 rounded-0 fundo-paleta-1 text-white" type="button" id="button-addon"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
-                <div class="col-4 d-flex align-items-center justify-content-end gap-2">
+                <div class="col-4 d-none d-lg-flex align-items-center justify-content-end gap-2">
                     <div class="d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-circle-user icones-medios"></i>
                     </div>
@@ -48,6 +69,18 @@
                         <span><a href="" class="text-decoration-none text-dark"><b>ENTRAR</b></a>&nbsp;ou</span> 
                         <span><a href="" class="text-decoration-none text-dark"><b>CRIAR CONTA</b></a></span>
                     </div>
+                </div>
+            </div>
+            <div class="container d-flex justify-content-between">
+                <div>
+                    <a class="d-flex d-lg-none px-3 py-2 fundo-paleta-2 link-dark" type="button" id="openMenu">
+                        <span><i class="fa-solid fa-bars"></i></span>
+                    </a>
+                </div>
+                <div>
+                    <a class="d-flex d-lg-none px-3 py-2 fundo-paleta-2 link-dark" type="button" id="">
+                        <span><i class="fa-solid fa-bars"></i></span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -79,8 +112,33 @@
                     <div class="col-12 col-lg-3 d-flex flex-column gap-4">
                         <div class="shadow px-2 py-2">
                             <div class="cor-paleta-1"><h5 class="py-1">Leilões em Andamento</h5></div>
-                            <div class="fundo-paleta-2 cor-paleta-1"><h6 class="fw-normal py-1">Categorias dos Bens</h6></div>
-                            <div>
+                            <div class="d-lg-none accordion-item">
+                                <h2 class="accordion-header" id="menuCategorias">
+                                    <button class="accordion-button fundo-paleta-2 cor-paleta-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Categorias dos Bens
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="menuCategorias">
+                                    <div class="accordion-body">
+                                        <ul id="lista-categorias">
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;VEÍCULOS</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;IMÓVEIS</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;INFORMÁTICA</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;VESTUÁRIO</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ELETRODOMÉSTICOS</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÓVEIS</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ALIMENTOS</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ARTE</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;SUCATAS</a></li>
+                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;COZINHA</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-lg-flex">
+                                <h5 class="fundo-paleta-2 cor-paleta-1 py-2">Categorias dos Bens</h5>
                                 <ul id="lista-categorias">
                                     <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;VEÍCULOS</a></li>
                                     <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;IMÓVEIS</a></li>
@@ -100,13 +158,31 @@
                                 <a href="" class="text-decoration-none text-white fs-5"><i class="fa-solid fa-magnifying-glass"></i>  Pesquisa Avançada</a>
                             </div>
                         </div>
-                        <div id="banner_categorias" class="shadow">
+                        <div id="banner_categorias" class="d-none d-lg-flex shadow">
                             <h3>Espaço para Banner 300x500</h3>
                         </div>
                     </div>
                     <section id="conteudo-site" class="col-12 col-lg-9">
-                        <div>
-                            <div class="d-flex justify-content-between mx-4 pb-3">
+                        <div class="d-lg-none accordion-item">
+                            <h2 class="accordion-header" id="menuLeiloes">
+                                <button class="accordion-button fundo-paleta-2 cor-paleta-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    Opções de Leilão
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="menuLeiloes">
+                                <div class="accordion-body">
+                                    <div class="d-flex flex-column justify-content-between mx-4 pb-3">
+                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none border-bottom">TODOS LEILÕES</a>
+                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none border-bottom">EXTRA JUDICIAL</a>
+                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none border-bottom">JUDICIAL</a>
+                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none border-bottom">VENDA DIRETA</a>
+                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none"><img src="" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none d-lg-flex">
+                            <div class="d-flex flex-column flex-lg-row justify-content-between mx-4 pb-3 w-100">
                                 <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none">TODOS LEILÕES</a>
                                 <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none">EXTRA JUDICIAL</a>
                                 <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none">JUDICIAL</a>
@@ -114,7 +190,7 @@
                                 <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none"><img src="" alt=""></a>
                             </div>
                         </div>
-                        <div>
+                        <div class="d-none">
                             <img src="images/leiloes.png" alt="">
                             <img src="images/leiloes.png" alt="">
                         </div>
@@ -124,15 +200,26 @@
         </section>
     </main>
 
+    <section class="d-flex d-lg-none">
+        <div id="cadastro-footer" class="w-100 fundo-paleta-2 d-flex flex-column align-items-center justify-content-between py-4">
+            <div class="px-5">
+                <h3 class="cor-paleta-1">Quer receber informações de todos os nossos Leilões?</h3>
+                <h6 class="cor-paleta-4">Cadastre-se em nosso site e se mantenha informado!</h6>
+            </div>
+            <div class="px-5 py-4">
+                <a href="" class="text-white fundo-paleta-4 px-5 py-3 text-decoration-none">Cadastre-se</a>
+            </div>
+        </div>
+    </section>
     <!-------------------------------------------------------------------------------->
     <footer class="position-relative">
         <!--Menu Footer-->
-        <section class="fundo-paleta-1 text-white py-5 ">
-            <div class="container d-flex justify-content-center pt-5">
-                <div class="col-3">
+        <section class="fundo-paleta-1 text-white py-lg-5">
+            <div class="container d-flex flex-column flex-lg-row justify-content-center pt-5 gap-5 gap-lg-0 ps-5 ps-lg-0">
+                <div class="col-12 col-md-6 col-lg-4">
                     <img src="images/logo.png" alt="" style="filter: brightness(100);">
                 </div>
-                <div class="col-3 menu-footer">
+                <div class="col-12 col-md-6 col-lg-3 menu-footer">
                     <h5>INSTITUCIONAL</h5>
                     <a href="">QUEM SOMOS</a>
                     <a href="">PALAVRAS MAIS USADAS</a>
@@ -140,17 +227,27 @@
                     <a href="">POLÍTICA DE PRIVACIDADE</a>
                     <a href="">POLÍTICA DE SEGURANÇA</a>
                 </div>
-                <div class="col-3 menu-footer">
+                <div class="col-12 col-md-6 col-lg-3 menu-footer">
                     <h5>ACESSO E CONTATO</h5>
                     <a href="">AJUDA</a>
                     <a href="">FALE CONOSCO</a>
                     <a href="">QUERO VENDER</a>
                     <a href="">INDIQUE-NOS</a>
-                    <a href="">ENTRAR</a>
+                    <a href="" class="d-none d-lg-block">ENTRAR</a>
+                    
                 </div>
-                <div class="col-3">
+                <div class="d-flex d-lg-none gap-3 justify-content-center">
+                    <a href="" type="button" class="bg-white px-4 py-2 cor-paleta-1 text-decoration-none">ENTRAR</a>
+                    <a href="" type="button" class="bg-white px-4 py-2 cor-paleta-1 text-decoration-none">CADASTRE-SE</a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
                     <div>
                         <h5>SIGA-NOS</h5>
+                        <div class="d-flex gap-3 py-3">
+                            <a href=""><i class="fa-brands fa-facebook text-white fs-3"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram text-white fs-3"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin text-white fs-3"></i></a>
+                        </div>
                     </div>
                     <div>
                         <h5>ENDEREÇO</h5>
@@ -160,14 +257,14 @@
             </div>
         </section>
         <!--Cadastro Footer-->
-        <section class="container d-flex">
+        <section class="container d-none d-lg-flex">
             <div id="cadastro-footer" class=" container fundo-paleta-2 d-flex align-items-center justify-content-between position-absolute py-4">
-                <div class="px-5">
+                <div class="px-lg-3">
                     <h3 class="cor-paleta-1">Quer receber informações de todos os nossos Leilões?</h3>
                     <h6 class="cor-paleta-4">Cadastre-se em nosso site e se mantenha informado!</h6>
                 </div>
-                <div class="px-5">
-                    <a href="" class="text-white fundo-paleta-4 px-5 py-3 text-decoration-none">Cadastre-se</a>
+                <div class="px-lg-3">
+                    <a href="" class="text-white fundo-paleta-4 px-3 py-3 text-decoration-none">Cadastre-se</a>
                 </div>
             </div>
         </section>
