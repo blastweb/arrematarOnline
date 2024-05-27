@@ -26,10 +26,27 @@
                 <a href="../area/fale-conosco#conteudo-site" class="btn-block btn-light text-decoration-none m-0">Fale Conosco</a>
                 <hr>
                 <div class="d-flex flex-column align-items-center gap-3">
-                    <a href="../externo/login#conteudo-site" class="px-3 py-2 fundo-paleta-2 text-decoration-none link-dark">LOGIN</a>
-                    <a href="../externo/cadastrar#conteudo-site" class="px-3 py-2 fundo-paleta-2 text-decoration-none link-dark">CADASTRE-SE</a>
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="px-3 py-2 fundo-paleta-2 text-decoration-none link-dark">LOGIN</a>
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="px-3 py-2 fundo-paleta-2 text-decoration-none link-dark">CADASTRE-SE</a>
                 </div>
                 <hr>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="noTransition" class="modal-dialog">
+            <div id="modalMenu2" class="rounded-0">
+                <div class="modal-header p-0 pb-3">
+                    <a href="#"><img class="w-50" src="images/logo.png" alt="Logo da Empresa"></a>
+                    <a type="button" class="px-3 py-2 bg-danger text-dark" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-x"></i></a>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -43,10 +60,10 @@
                     <div><i class="fa-solid fa-envelope"></i> Email</div>
                 </div>
                 <nav class="d-none d-lg-flex align-items-center gap-5">
-                    <a href="" class="text-decoration-none cor-paleta-1">Home</a>
-                    <a href="" class="text-decoration-none cor-paleta-1">Quem Somos</a>
-                    <a href="" class="text-decoration-none cor-paleta-1">Fale Conosco</a>
-                    <a href="" class="text-decoration-none cor-paleta-1">Ajuda</a>
+                    <a href="" class="text-decoration-none cor-paleta-1 btnStyle2 px-2">Home</a>
+                    <a href="" class="text-decoration-none cor-paleta-1 btnStyle2 px-2">Quem Somos</a>
+                    <a href="" class="text-decoration-none cor-paleta-1 btnStyle2 px-2">Fale Conosco</a>
+                    <a href="" class="text-decoration-none cor-paleta-1 btnStyle2 px-2">Ajuda</a>
                 </nav>
             </div>
         </section>
@@ -77,9 +94,9 @@
                         <span><i class="fa-solid fa-bars"></i></span>
                     </a>
                 </div>
-                <div class="d-flex align-items-center gap-2">
-                    <a href="../externo/login#conteudo-site" class="px-3 py-2 fundo-paleta-2 text-decoration-none link-dark">LOGIN</a>
-                    <a href="../externo/cadastrar#conteudo-site" class="px-3 py-2 fundo-paleta-2 text-decoration-none link-dark">CADASTRE-SE</a>
+                <div class="d-flex d-lg-none align-items-center gap-2">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="px-3 py-2 fundo-paleta-2 text-decoration-none link-dark">LOGIN</a>
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="px-3 py-2 fundo-paleta-2 text-decoration-none link-dark">CADASTRE-SE</a>
                 </div>
             </div>
         </section>
@@ -110,7 +127,11 @@
                 <div class="d-flex flex-column flex-lg-row pb-5">
                     <div class="col-12 col-lg-3 d-flex flex-column gap-4">
                         <div class="shadow px-2 py-2">
-                            <div class="cor-paleta-1"><h5 class="py-1">Leilões em Andamento</h5></div>
+                            <div class="cor-paleta-1">
+                                <h5 class="py-1">Leilões em Andamento 
+                                    <span class="badge fundo-paleta-1 rounded-0">4</span>
+                                </h5>
+                            </div>
                             <div class="d-lg-none accordion-item">
                                 <h2 class="accordion-header" id="menuCategorias">
                                     <button class="accordion-button fundo-paleta-2 cor-paleta-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -120,18 +141,18 @@
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="menuCategorias">
                                     <div class="accordion-body">
                                         <ul id="lista-categorias">
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;VEÍCULOS</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;IMÓVEIS</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;INFORMÁTICA</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;VESTUÁRIO</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ELETRODOMÉSTICOS</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÓVEIS</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ALIMENTOS</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ARTE</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;SUCATAS</a></li>
-                                            <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;COZINHA</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;VEÍCULOS</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;IMÓVEIS</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;INFORMÁTICA</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;VESTUÁRIO</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ELETRODOMÉSTICOS</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÓVEIS</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ALIMENTOS</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ARTE</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;SUCATAS</a></li>
+                                            <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;COZINHA</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -139,18 +160,18 @@
                             <div class="d-none d-lg-flex flex-column">
                                 <h5 class="fundo-paleta-2 cor-paleta-1 py-2">Categorias dos Bens</h5>
                                 <ul id="lista-categorias">
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;VEÍCULOS</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;IMÓVEIS</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;INFORMÁTICA</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;VESTUÁRIO</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ELETRODOMÉSTICOS</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;MÓVEIS</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ALIMENTOS</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;ARTE</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;SUCATAS</a></li>
-                                    <li><a href=""><i class="fa-solid fa-caret-right"></i>&nbsp;COZINHA</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;VEÍCULOS</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;IMÓVEIS</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;INFORMÁTICA</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;VESTUÁRIO</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ELETRODOMÉSTICOS</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÓVEIS</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ALIMENTOS</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ARTE</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;SUCATAS</a></li>
+                                    <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;COZINHA</a></li>
                                 </ul>
                             </div>
                             <div class="d-flex justify-content-center align-items-center fundo-paleta-1 py-3">
@@ -171,22 +192,22 @@
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="menuLeiloes">
                                 <div class="accordion-body">
                                     <div class="d-flex flex-column justify-content-between mx-4 pb-3">
-                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none border-bottom">TODOS LEILÕES</a>
-                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none border-bottom">EXTRA JUDICIAL</a>
-                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none border-bottom">JUDICIAL</a>
-                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none border-bottom">VENDA DIRETA</a>
-                                        <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none"><img src="" alt=""></a>
+                                        <a class="btnStyle1 px-4 py-3 text-nowrap text-decoration-none border-bottom">TODOS LEILÕES</a>
+                                        <a class="btnStyle1 px-4 py-3 text-nowrap text-decoration-none border-bottom">EXTRA JUDICIAL</a>
+                                        <a class="btnStyle1 px-4 py-3 text-nowrap text-decoration-none border-bottom">JUDICIAL</a>
+                                        <a class="btnStyle1 px-4 py-3 text-nowrap text-decoration-none border-bottom">VENDA DIRETA</a>
+                                        <a class="btnStyle1 px-2 py-1 text-nowrap text-decoration-none"><img class="w-75" src="images/bomvalor.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="d-none d-lg-flex">
                             <div class="d-flex flex-column flex-lg-row justify-content-between mx-4 pb-3 w-100">
-                                <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none">TODOS LEILÕES</a>
-                                <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none">EXTRA JUDICIAL</a>
-                                <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none">JUDICIAL</a>
-                                <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none">VENDA DIRETA</a>
-                                <a class="bg-white cor-paleta-1 px-4 py-3 text-nowrap text-decoration-none"><img src="" alt=""></a>
+                                <a class="px-4 py-3 text-nowrap text-decoration-none btnStyle1">TODOS LEILÕES</a>
+                                <a class="px-4 py-3 text-nowrap text-decoration-none btnStyle1">EXTRA JUDICIAL</a>
+                                <a class="px-4 py-3 text-nowrap text-decoration-none btnStyle1">JUDICIAL</a>
+                                <a class="px-4 py-3 text-nowrap text-decoration-none btnStyle1">VENDA DIRETA</a>
+                                <a class="px-4 py-2 text-nowrap text-decoration-none btnStyle1"><img class="w-75" src="images/bomvalor.png" alt=""></a>
                             </div>
                         </div>
                         <div class="d-none">
@@ -234,10 +255,6 @@
                     <a href="">INDIQUE-NOS</a>
                     <a href="" class="d-none d-lg-block">ENTRAR</a>
                     
-                </div>
-                <div class="d-flex d-lg-none gap-3 justify-content-center">
-                    <a href="" type="button" class="bg-white px-4 py-2 cor-paleta-1 text-decoration-none">ENTRAR</a>
-                    <a href="" type="button" class="bg-white px-4 py-2 cor-paleta-1 text-decoration-none">CADASTRE-SE</a>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
                     <div>
