@@ -13,7 +13,7 @@
 	<meta name="language" content="portuguese">
 	<meta name="distribution" content="Global">
 	<meta name="robots" content="index,follow"> 
-    <base href="<?=$this->Html->url('/')?>" />
+    <base href="<?=$this->Html->url('/novo/')?>" />
 	<meta property="og:title" content="<?=$configuracoes_gerais['titulo']?>"></meta>
 	<meta property="og:description" content="<?=$configuracoes_gerais['descricao']?>"></meta>
     <link rel="shortcut icon" href="cliente/img/logo.png" type="image/x-icon">
@@ -95,7 +95,7 @@
                 <nav class="d-none d-lg-flex align-items-center gap-1">
                     <a href="/" class="text-decoration-none cor-paleta-1 btnStyle2 p-2">Home</a>
                     <?= $this->Html->Link('Quem Somos', '/area/quem-somos#conteudo', array('class' => 'text-decoration-none cor-paleta-1 btnStyle2 p-2')); ?>
-                    <?= $this->Html->Link('Fale Conosco', '/area/central-de-atendimento#conteudo-site, array('class' => 'text-decoration-none cor-paleta-1 btnStyle2 p-2')'); ?>
+                    <?= $this->Html->Link('Fale Conosco', '/area/central-de-atendimento#conteudo-site', array('class' => 'text-decoration-none cor-paleta-1 btnStyle2 p-2')); ?>
                     <?= $this->Html->Link('Ajuda', '/area/ajuda#conteudo', array('class' => 'text-decoration-none cor-paleta-1 btnStyle2 p-2')); ?>
                 </nav>
             </div>
