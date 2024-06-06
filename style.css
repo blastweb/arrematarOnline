@@ -5,6 +5,11 @@
     --paleta4:#666666; /*Ton de cinza*/
 }
 
+hr{
+    padding: 0 !important;
+    height: 0 !important;
+}
+
 .cor-paleta-1{
     color: var(--paleta1);
 }
@@ -233,4 +238,8 @@
 
 #modalMenu2.hide2 {
     top: 0;
+}
+
+.swiper{
+    max-height: 300px;
 }
