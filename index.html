@@ -150,9 +150,10 @@
         <!--Banner Rotativo-->
         <section class="fundo-paleta-2">
             <div class="container py-2">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <?$bannersTopo = exibirBanner(1);
+                <? if($this->params['controller'] == "leiloes"){?>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                           <? $bannersTopo = exibirBanner(1);
                             // die(pr($bannersTopo));
                             foreach($bannersTopo as $banner){ ?>
                                 <?php if(!empty($banner['Banner']['link'])){?>
@@ -160,14 +161,13 @@
                                 <?}else{?>
                                     <div class="swiper-slide"><img class="d-block w-100" src="<?=$this->Html->url('../../arquivos/banners/'.$banner['Banner']['arquivo'])?>" alt="lote"></div>
                                 <?}?>
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                 </div>
+                <? } ?>
             </div>
         </section>
         <!--Categorias e Leiloes-->
