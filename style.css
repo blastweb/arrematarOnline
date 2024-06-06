@@ -24,25 +24,25 @@ hr{
 }
 
 .fundo-paleta-1{
-    background-color: var(--paleta1);
+    background-color: var(--paleta1)!important;
 }
 .fundo-paleta-2{
-    background-color: var(--paleta2);
+    background-color: var(--paleta2)!important;
 }
 .fundo-paleta-3{
-    background-color: var(--paleta3);
+    background-color: var(--paleta3)!important;
 }
 .fundo-paleta-4{
-    background-color: var(--paleta4);
+    background-color: var(--paleta4)!important;
 }
 .borda-paleta-1{
-    border: 1px solid var(--paleta1);
+    border: 1px solid var(--paleta1)!important;
 }
 .borda-b-paleta-1{
-    border-bottom: 1px solid var(--paleta1);
+    border-bottom: 1px solid var(--paleta1)!important;
 }
 .borda-b-paleta-2{
-    border-bottom: 1px solid var(--paleta2);
+    border-bottom: 1px solid var(--paleta2)!important;
 }
 .icones-medios{
     font-size: 30px;
@@ -242,4 +242,15 @@ hr{
 
 .swiper{
     max-height: 300px;
+}
+.h6, h6 {
+    font-size: 1rem!important;
+    border-bottom: 0px!important;
+}
+@media (min-width: 992px) {
+    #conteudo-site .col-lg-3 {
+        -ms-flex: 0 0 33%;
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
 }
