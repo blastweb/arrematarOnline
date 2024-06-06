@@ -107,10 +107,10 @@ hr{
     display: flex;
     flex-direction: column;
 }
-.menu-footer > a{
+.menu-footer > a, .menu-footer span{
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
 }
 .menu-footer > a:hover{
     color: #deffda;

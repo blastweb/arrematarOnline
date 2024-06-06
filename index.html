@@ -151,7 +151,6 @@
         <!--Banner Rotativo-->
         <section class="fundo-paleta-2">
             <div class="container py-2">
-                <? if($this->params['controller'] == "leiloes"){?>
                     <div class="swiper">
                         <div class="swiper-wrapper">
                            <? $bannersTopo = exibirBanner(2);
@@ -168,24 +167,23 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
-                <? } ?>
             </div>
         </section>
         <!--Categorias e Leiloes-->
         <section class="bg-light">
             <div class="container py-5">
                 <? if($this->params['controller'] == "leiloes" && $this->params['action']=="index" ){?>
-                    <div class="d-flex text-secondary mb-4 borda-b-paleta-2" style="font-size: 20px;">
+                    <div class="d-flex text-secondary mb-4 borda-b-paleta-2" style="font-size: 16px;">
                         <a href="" class="text-decoration-none cor-paleta-1 borda-b-paleta-1 px-3 py-2">Próximos Leilões</a>
                         <a href="" class="text-decoration-none link-secondary px-3 py-2">Leilões Encerrados</a>
                     </div>
-                    <div class="d-flex flex-column flex-lg-row pb-5">
+                    <div class="d-flex flex-column flex-lg-row pb-5 gap-3">
                         <div class="col-12 col-lg-3 d-flex flex-column gap-4 p-0">
                             <div class="shadow px-2 py-2">
                                 <div class="cor-paleta-1">
-                                    <h6 class="py-1 w-100 d-flex justify-content-between">Leilões em Andamento 
+                                    <h6 class="py-1 w-100 d-flex justify-content-between"  style="font-size: 1rem;">Leilões em Andamento 
                                         <span class="badge fundo-paleta-1 rounded-0">4</span>
-                                    </h6>
+                                    </span>
                                 </div>
                                 <div class="d-lg-none accordion-item">
                                     <h2 class="accordion-header" id="menuCategorias">
@@ -196,48 +194,40 @@
                                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="menuCategorias">
                                         <div class="accordion-body">
                                             <ul id="lista-categorias">
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;VEÍCULOS</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;IMÓVEIS</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;INFORMÁTICA</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;VESTUÁRIO</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ELETRODOMÉSTICOS</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÓVEIS</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ALIMENTOS</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ARTE</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;SUCATAS</a></li>
-                                                <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;COZINHA</a></li>
+                                                <? foreach($categorias as $categorias2){ ?>
+                                                    <?if($categorias2['Categoria']['quantidade'] != 0){ ?>
+                                                        <li><a href="../por-categoria/<?=$categorias2['Categoria']['id']?>" class="btnStyle2"><i class="fa-solid fa-caret-right"></i><span class=""><?=$categorias2['Categoria']['quantidade']?></span></a></li>
+                                                    <?}else{?>
+                                                        <li><a class="btnStyle2"><i class="fa-solid fa-caret-right"></i> <?=$categorias2['Categoria']['nome']?></a><span class=""><?=$categorias2['Categoria']['quantidade']?></span></li>
+                                                    <?}?>
+                                                <?php } ?>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-none d-lg-flex flex-column">
-                                    <h6 class="fundo-paleta-2 cor-paleta-1 p-2">Categorias dos Bens</h6>
+                                    <span class="fundo-paleta-2 cor-paleta-1 p-2" style="font-weight: bold;font-size: 14px;">Categorias dos Bens</span>
                                     <ul id="lista-categorias">
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;VEÍCULOS</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;IMÓVEIS</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;INFORMÁTICA</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;VESTUÁRIO</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÁQUINAS</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ELETRODOMÉSTICOS</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;MÓVEIS</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ALIMENTOS</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;ARTE</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;SUCATAS</a></li>
-                                        <li><a href="" class="btnStyle2"><i class="fa-solid fa-caret-right"></i>&nbsp;COZINHA</a></li>
+                                        <? foreach($categorias as $categorias2){ 
+                                           //pr($categorias_pesquisa);
+                                            ?>
+                                            <?if($categorias2['Categoria']['quantidade'] != 0){ ?>
+                                                <li><a href="../por-categoria/<?=$categorias2['Categoria']['id']?>" class="btnStyle2"><i class="fa-solid fa-caret-right"></i> <?=$categorias2['Categoria']['nome']?></a><span class=""><?=$categorias2['Categoria']['quantidade']?></span></li>
+                                            <?}else{?>
+                                                <li><a class="btnStyle2"><i class="fa-solid fa-caret-right"></i> <?=$categorias2['Categoria']['nome']?></a><span class=""><?=$categorias2['Categoria']['quantidade']?></span></li>
+                                            <?}?>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center fundo-paleta-1 py-3">
                                     <a href="" class="text-decoration-none text-white fs-5"><i class="fa-solid fa-magnifying-glass"></i>  Pesquisa Avançada</a>
                                 </div>
                             </div>
-                            <div id="banner_categorias" class="d-none d-lg-flex shadow">
+                            <div id="banner_categorias" class="d-none d-lg-flex bg-white">
                                 <h3>Espaço para Banner 300x500</h3>
                             </div>
                         </div>
-                        <section id="conteudo-site" class="col-12 col-lg-9">
+                        <section id="conteudo-site" class="col-12 col-lg-9 px-0">
                             <div class="d-lg-none accordion-item">
                                 <h2 class="accordion-header" id="menuLeiloes">
                                     <button class="accordion-button fundo-paleta-2 cor-paleta-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -246,7 +236,7 @@
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="menuLeiloes">
                                     <div class="accordion-body">
-                                        <div class="d-flex flex-column justify-content-between mx-4 pb-3">
+                                        <div class="d-flex flex-column justify-content-between mx-4">
                                             <a class="btnStyle1 px-4 py-3 text-nowrap text-decoration-none border-bottom">TODOS LEILÕES</a>
                                             <a class="btnStyle1 px-4 py-3 text-nowrap text-decoration-none border-bottom">EXTRA JUDICIAL</a>
                                             <a class="btnStyle1 px-4 py-3 text-nowrap text-decoration-none border-bottom">JUDICIAL</a>
@@ -257,7 +247,7 @@
                                 </div>
                             </div>
                             <div class="d-none d-lg-flex">
-                                <div class="d-flex flex-column flex-lg-row justify-content-between mx-4 pb-3 w-100 gap-1">
+                                <div class="d-flex flex-column flex-lg-row justify-content-between pb-3 w-100 gap-1">
                                     <a class="px-3 py-3 text-nowrap text-decoration-none btnStyle1">TODOS LEILÕES</a>
                                     <a class="px-3 py-3 text-nowrap text-decoration-none btnStyle1">EXTRA JUDICIAL</a>
                                     <a class="px-3 py-3 text-nowrap text-decoration-none btnStyle1">JUDICIAL</a>
@@ -267,6 +257,7 @@
                             </div>
                             <section id="conteudo-site" class="col-12 p-0">
                                 <?=$this->fetch('content');?>
+                                
                             </section>
                         </section>
                     </div>
@@ -295,7 +286,7 @@
     <!-------------------------------------------------------------------------------->
     <footer class="position-relative">
         <!--Menu Footer-->
-        <section class="fundo-paleta-1 text-white py-lg-5">
+        <section class="fundo-paleta-1 text-white py-lg-5 py-2">
             <div class="container d-flex flex-column flex-lg-row justify-content-center pt-5 gap-5 gap-lg-0 ps-5 ps-lg-0">
                 <div class="col-12 col-md-6 col-lg-3">
                     <img src="../cliente/img/logo.png" alt="" style="filter: brightness(100);max-height: 100px;">
@@ -316,7 +307,7 @@
                     <a href="" class="d-none d-lg-block">ENTRAR</a>
                     
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3 menu-footer">
                     <div>
                         <h6>SIGA-NOS</h6>
                         <div class="d-flex gap-3 py-3">
