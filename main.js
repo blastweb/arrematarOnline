@@ -1,22 +1,19 @@
-$(document).ready(function(){
-    $('.banner-topo').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows:false,
-        responsive:[
-            {
-                breakpoint:768,
-                settings:{
-                    
-                }
-            }
-        ]
-    });
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    cssMode: false,
+    loop: true,
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    keyboard:true,
+    autoHeight: true,
+    autoplay:{delay: 5000, pauseOnMouseEnter:true},
 });
 
 const openModalMenuButton = document.querySelector("#openMenu");

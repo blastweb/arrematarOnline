@@ -5,6 +5,11 @@
     --paleta4:#666666; /*Ton de cinza*/
 }
 
+hr{
+    padding: 0 !important;
+    height: 0 !important;
+}
+
 .cor-paleta-1{
     color: var(--paleta1);
 }
@@ -19,25 +24,25 @@
 }
 
 .fundo-paleta-1{
-    background-color: var(--paleta1);
+    background-color: var(--paleta1)!important;
 }
 .fundo-paleta-2{
-    background-color: var(--paleta2);
+    background-color: var(--paleta2)!important;
 }
 .fundo-paleta-3{
-    background-color: var(--paleta3);
+    background-color: var(--paleta3)!important;
 }
 .fundo-paleta-4{
-    background-color: var(--paleta4);
+    background-color: var(--paleta4)!important;
 }
 .borda-paleta-1{
-    border: 1px solid var(--paleta1);
+    border: 1px solid var(--paleta1)!important;
 }
 .borda-b-paleta-1{
-    border-bottom: 1px solid var(--paleta1);
+    border-bottom: 1px solid var(--paleta1)!important;
 }
 .borda-b-paleta-2{
-    border-bottom: 1px solid var(--paleta2);
+    border-bottom: 1px solid var(--paleta2)!important;
 }
 .icones-medios{
     font-size: 30px;
@@ -79,19 +84,22 @@
 }
 #lista-categorias{
     padding: 0;
-    padding: 5px 30px 0 0;
+    padding: 5px 5px 0 0;
 }
 #lista-categorias > li{
     list-style: none;
     border-bottom: 1px solid #c6c6c6;
     padding: 6px 0;
     font-size: 12px;
+    display: flex;
+    justify-content: space-between;
 }
 #lista-categorias > li:last-child{
     border-bottom: 0;
 }
 #lista-categorias > li > a{
     text-decoration: none;
+    width: 165px;
 }
 
 #cadastro-footer{
@@ -102,10 +110,13 @@
     display: flex;
     flex-direction: column;
 }
-.menu-footer > a{
+.menu-footer > a, .menu-footer span{
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
+}
+.menu-footer > a:hover{
+    color: #deffda;
 }
 /***********MODAL 1**************/
 #closeMenu span img{
@@ -233,4 +244,19 @@
 
 #modalMenu2.hide2 {
     top: 0;
+}
+
+.swiper{
+    max-height: 300px;
+}
+.h6, h6 {
+    font-size: 1rem!important;
+    border-bottom: 0px!important;
+}
+@media (min-width: 992px) {
+    #conteudo-site .inicial .col-lg-3 {
+        -ms-flex: 0 0 33%;
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
 }
