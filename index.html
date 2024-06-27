@@ -179,7 +179,7 @@
             <div class="container py-2">
                     <div class="swiper">
                         <div class="swiper-wrapper">
-                           <? $bannersTopo = exibirBanner(2);
+                           <? $bannersTopo = exibirBanner(1);
                             // die(pr($bannersTopo));
                             foreach($bannersTopo as $banner){ ?>
                                 <?php if(!empty($banner['Banner']['link'])){?>
@@ -250,7 +250,15 @@
                                 </div>
                             </div>
                             <div id="banner_categorias" class="d-none d-lg-flex bg-white">
-                                <h3>Espaço para Banner 300x500</h3>
+                                <? $bannersTopo = exibirBanner(2);
+                                // die(pr($bannersTopo));
+                                foreach($bannersTopo as $banner){ ?>
+                                    <?php if(!empty($banner['Banner']['link'])){?>
+                                    <div class="swiper-slide"><a href="<?=$banner['Banner']['link']?>" target="_blank"><img class="d-block w-100" src="<?=$this->Html->url('../arquivos/banners/'.$banner['Banner']['arquivo'])?>" alt="lote"></a></div>
+                                    <?}else{?>
+                                        <div class="swiper-slide"><img class="d-block w-100" src="<?=$this->Html->url('../arquivos/banners/'.$banner['Banner']['arquivo'])?>" alt="lote"></div>
+                                    <?}?>
+                                <?php } ?>
                             </div>
                         </div>
                         <section id="conteudo-site" class="col-12 col-lg-9 px-0">
